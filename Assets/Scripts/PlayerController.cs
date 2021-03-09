@@ -38,7 +38,15 @@ namespace GetCloser
 
         public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
         {
-            throw new System.NotImplementedException();
+            if (stream.IsReading)
+            {
+
+            }
+            else if (stream.IsWriting)
+            {
+
+            }
+            
         }
     }
 

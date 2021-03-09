@@ -27,7 +27,7 @@ namespace GetCloser.Network
         private TMP_InputField roomIDLogin;
 
         [SerializeField]
-        private Dictionary<string, RoomInfo> cachedRoomList;
+        private Dictionary<string, RoomInfo> cachedRoomList = new Dictionary<string, RoomInfo>();
 
 
 
@@ -76,7 +76,7 @@ namespace GetCloser.Network
 
         public override void OnRoomListUpdate(List<RoomInfo> roomList)
         {
-
+            Debug.Log("RoomListUpdated");
             UpdateCachedRoomList(roomList);
         }
 
